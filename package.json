@@ -1,0 +1,33 @@
+{
+  "name": "nr-ecommerce-event-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc --build",
+    "start:nr": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciusooliveira/nr-ecommerce-event-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viniciusooliveira/nr-ecommerce-event-generator/issues"
+  },
+  "homepage": "https://github.com/viniciusooliveira/nr-ecommerce-event-generator#readme",
+  "devDependencies": {
+    "@types/newrelic": "^7.0.3",
+    "@types/node": "^18.7.18",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "newrelic": "^9.0.3"
+  }
+}
