@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/viniciusooliveira/nr-ecommerce-event-generator#readme",
   "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
     "@types/newrelic": "^7.0.3",
     "@types/node": "^18.7.18",
     "ts-node": "^10.9.1",
