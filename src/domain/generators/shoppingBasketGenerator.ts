@@ -1,15 +1,17 @@
 import { faker } from "@faker-js/faker";
-import { Item } from "../models/item";
-import { ShoppingBasket } from "../models/shoppingBasket";
-import { generateItem } from "./itemGenerator";
-import { generateUser } from "./userGenerator";
+import { ShoppingBasket, ShoppingBasketItem } from "../models/shoppingBasket.js";
+import { generateItem } from "./itemGenerator.js";
+import { generateUser } from "./userGenerator.js";
 
 export const generateShoppingBasket = () : ShoppingBasket => {
 
-  const itens: Item[] = []
+  const itens: ShoppingBasketItem[] = []
 
   for(let i = 0; i < faker.datatype.number({ min: 1, max: 55 }); i++)
-    itens.push(generateItem())
+    itens.push({
+      item: generateItem(),
+      quantity: faker.datatype.number({ min: 1, max: 99 })
+    })
 
   return {
     items: itens,

@@ -1,7 +1,12 @@
-import { Item } from "./item";
-import { User } from "./user";
+import { Item } from "./item.js";
+import { User } from "./user.js";
 
 export interface ShoppingBasket {
   user?: User | null,
-  items: Item[]
+  items: ShoppingBasketItem[]
+}
+
+export interface ShoppingBasketItem{
+  item: Item,
+  quantity: number
 }

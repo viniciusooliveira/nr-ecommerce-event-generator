@@ -1,11 +1,12 @@
-import { Address } from "./address";
-import { PaymentMethod } from "../enums";
-import { ShoppingBasket } from "./shoppingBasket";
+import { Address } from "./address.js";
+import { PaymentMethod } from "../enums.js";
+import { ShoppingBasket } from "./shoppingBasket.js";
 
 export interface Purchase extends ShoppingBasket {
   purchaseId: string,
   address: Address,
   total: number,
   paymentMethod: PaymentMethod,
-  installments: number
+  installments: number,
+  cartTime: number
 }
