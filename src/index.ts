@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker"
 import { generatePurchaseAndSendEvent } from "./event.js"
 
-let tps = 10
+let tps = 0
 let max = 0
 let count = 0
 
@@ -15,7 +15,7 @@ const timeoutFunction = async () => {
     count++
   }else{
     tps = faker.datatype.number({ min: 10, max: 500 })
-    max = faker.datatype.number({ min: 45*60, max: 60*60 })
+    max = faker.datatype.number({ min: 17*60, max: 34*60 })
     console.log(`New TPS: ${tps} for ${max/60} minutes`)
     count = 0
   }

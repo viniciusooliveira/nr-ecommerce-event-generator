@@ -1,9 +1,11 @@
 import * as dotenv from 'dotenv'
+
 dotenv.config()
 
 import { generatePurchase } from "./domain/generators/purchaseGenerator.js"
 import { Purchase } from "./domain/models/purchase.js"
 import { sendEvents } from './service/newrelicHttpService.js'
+import { savePurchase } from './service/elasticSearchHttpService.js'
 
 const generatePurchaseEvent = (data: Purchase) : any => {
   return {
@@ -45,7 +47,7 @@ const generatePurchaseItemsEvent = (data: Purchase) : any[] => {
 export const generatePurchaseAndSendEvent = async () => {
   const purchase = generatePurchase()
 
-  const teste = JSON.stringify(purchase)
+  await savePurchase(purchase)
 
   const events = []
 
