@@ -11,8 +11,8 @@ export const generateItem = () : Item => {
   })
 
   const final = faker.datatype.number({
-    min: 1,
-    max: 3,
+    min: 0.5,
+    max: 2.5,
     precision: 0.01
   }) * cost
 

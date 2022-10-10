@@ -7,10 +7,10 @@ export const generateShoppingBasket = () : ShoppingBasket => {
 
   const itens: ShoppingBasketItem[] = []
 
-  for(let i = 0; i < faker.datatype.number({ min: 1, max: 55 }); i++)
+  for(let i = 0; i < faker.datatype.number({ min: 1, max: 10 }); i++)
     itens.push({
       item: generateItem(),
-      quantity: faker.datatype.number({ min: 1, max: 99 })
+      quantity: faker.datatype.number({ min: 1, max: 9 })
     })
 
   return {
