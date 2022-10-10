@@ -16,7 +16,7 @@ export const generatePurchase = () : Purchase => {
     installments: paymentMethod == PaymentMethod.CREDIT_CARD ? faker.datatype.number({ min: 1, max: 12 }) : 1,
     paymentMethod: paymentMethod,
     purchaseId: faker.datatype.uuid(),
-    total: shoppingBasket.items.reduce((p, x) => p+x.item.finalValue*x.quantity, 0),
+    total: shoppingBasket.items.reduce((p, x) => p+(x.item.finalValue*x.quantity), 0),
     cartTime: faker.datatype.number({ min: 1, max: 600 })
   }
 }
