@@ -5,8 +5,8 @@ import { Item } from "../models/item";
 export const generateItem = () : Item => {
 
   const cost = faker.datatype.number({
-    min: 9.9,
-    max: 99.9,
+    min: 0.99,
+    max: 39.99,
     precision: 0.01
   })
 
