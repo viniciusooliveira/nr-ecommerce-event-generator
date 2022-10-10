@@ -10,11 +10,11 @@ let count = 0
 const timeoutFunction = async () => {
   if(count < max){
     for (let i = 0; i<tps; i++) {
-      setTimeout(generatePurchaseAndSendEvent, faker.datatype.number({ min: 1, max: 47 }))
+      setTimeout(generatePurchaseAndSendEvent, faker.datatype.number({ min: 100, max: 700 }))
     }
     count++
   }else{
-    tps = faker.datatype.number({ min: 10, max: 500 })
+    tps = faker.datatype.number({ min: 1, max: 24 })
     max = faker.datatype.number({ min: 17*60, max: 34*60 })
     console.log(`New TPS: ${tps} for ${max/60} minutes`)
     count = 0
