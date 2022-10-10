@@ -15,7 +15,7 @@ const generatePurchaseEvent = (data: Purchase) : any => {
     cartTime: data.cartTime,
     installments: data.installments,
     paymentMethod: data.paymentMethod,
-    itemQuantity: data.items.length,
+    itemQuantity: data.items.reduce((v,x) => v + x.quantity, 0),
     userGender: data.user?.gender,
     userAge: data.user?.age,
     deliveryAddressLatitude: data.address.latitude,
