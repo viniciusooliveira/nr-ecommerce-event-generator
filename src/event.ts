@@ -11,7 +11,7 @@ const generatePurchaseEvent = (data: Purchase) : any => {
   return {
     purchaseId: data.purchaseId,
     totalValue: data.total,
-    totalCost: data.items.reduce((v, i) => v+i.item.costValue, 0),
+    totalCost: data.items.reduce((v, i) => v+(i.item.costValue*i.quantity), 0),
     cartTime: data.cartTime,
     installments: data.installments,
     paymentMethod: data.paymentMethod,
